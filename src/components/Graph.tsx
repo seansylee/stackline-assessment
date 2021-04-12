@@ -35,7 +35,7 @@ const Graph: React.FC<GraphProps> = (props: GraphProps) => {
       <XYPlot
         xType="time"
         yDomain={[-1500000, 2000000]}
-        width={900}
+        width={1100}
         height={500}
       >
         <XAxis />
