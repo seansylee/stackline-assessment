@@ -10,9 +10,11 @@ type GraphProps = {
 const Graph: React.FC<GraphProps> = (props: GraphProps) => {
   const { sales } = props;
 
+  // Satify LineSeriese props of any[];
   let retailSalesData: any[] = [];
   let wholesaleSalesData: any[] = [];
 
+  // creating data points.
   sales.map((sale) => {
     let day = sale["weekEnding"].split("-");
     let rearrangedDay = `${day[1]}-${day[2]}-${day[0]}`;

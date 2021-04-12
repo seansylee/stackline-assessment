@@ -19,26 +19,26 @@ const App: React.FC = () => {
   return (
     <>
     <div className="top-banner"> <img src="./utils/images/stackline_logo.svg" alt="Stackline Logo" /> Stackline </div>
-    <div className="main-container">
-      {loading ? (
-        <div> loading... </div>
-      ) : (
-        <>
-          <div className="side-bar-container">
-            <SideBar
-              title={item[0].title}
-              image={item[0].image}
-              subtitle={item[0].subtitle}
-              tags={item[0].tags}
-            />
-          </div>
-          <div className="detail-container">
-            <Graph sales={item[0].sales}/>
-            <Table sales={item[0].sales} />
-          </div>{" "}
-        </>
-      )}
-    </div>
+      <div className="main-container">
+        {loading ? (
+          <div> loading... </div>
+        ) : (
+          <>
+            <div className="side-bar-container">
+              <SideBar
+                title={item[0].title}
+                image={item[0].image}
+                subtitle={item[0].subtitle}
+                tags={item[0].tags}
+              />
+            </div>
+            <div className="detail-container">
+              <Graph sales={item[0].sales}/>
+              <Table sales={item[0].sales} />
+            </div>
+          </>
+        )}
+      </div>
     </>
   );
 };

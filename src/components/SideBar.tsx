@@ -9,6 +9,7 @@ type SideBarProps = {
 };
 
 const SideBar: React.FC<SideBarProps> = (props: SideBarProps) => {
+    
   const { title, image, subtitle, tags } = props;
 
   return (
@@ -28,23 +29,23 @@ const SideBar: React.FC<SideBarProps> = (props: SideBarProps) => {
         </div>
       </div>
       <div className="side-nav-container">
-            <div className="nav-button" style={{ color: "grey" }}>
-                <i
-                className="fa fa-home"
-                // to keep the UI  as disabled
-                style={{ color: "grey" }}
-                aria-hidden="true"
-                ></i>
-                OVERVIEW
-            </div>
-            <div className="nav-button" style={{ color: "black" }}>
-                <i
-                className="fa fa-bar-chart"
-                style={{ color: "#008DA9" }}
-                aria-hidden="true"
-                ></i>
-                SALES
-            </div>
+        <div className="nav-button" style={{ color: "grey" }}>
+          <i
+            className="fa fa-home"
+            // to keep the UI as disabled
+            style={{ color: "grey" }}
+            aria-hidden="true"
+          ></i>
+          OVERVIEW
+        </div>
+        <div className="nav-button" style={{ color: "black" }}>
+          <i
+            className="fa fa-bar-chart"
+            style={{ color: "#008DA9" }}
+            aria-hidden="true"
+          ></i>
+          SALES
+        </div>
       </div>
     </div>
   );

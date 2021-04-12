@@ -27,9 +27,8 @@ const formatData = (type: string, data: number): string => {
 const Table: React.FC<TableProps> = (props: TableProps) => {
   const [sortedSales, setSortedSales] = useState(props.sales);
 
-  // will sort by sales category.
+  // This will sort the sales information according to the category. (Toggles from ascending to Descending)
   const onSortSales = (sortKey: string) => {
-
     switch(sortKey){
         case "weekEnding":
             setSortedSales([...sortedSales].sort((a, b) => sortHelper(Number(a.weekEnding.replace(/-/g, "")), Number(b.weekEnding.replace(/-/g, "")), sortKey)));
