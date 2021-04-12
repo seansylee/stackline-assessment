@@ -1,7 +1,6 @@
 .details-container {
   background-color: white;
   margin-top: 40px;
-  font-size: 12px
 }
 .detail-table {
   width: 100%;
@@ -26,16 +25,18 @@ th {
   padding-bottom: 14px;
   font-size: 10px;
   font-weight: 100;
+  color: #141414;
   text-align: center;
   cursor: pointer;
 }
 
-th > i {
-  color: grey;
+th > i{
   margin-left: 5px;
+  color:grey;
 }
 
 td {
+  color: #141414;
   font-size: 11px;
   font-weight: 100;
   margin-top: 4px;
