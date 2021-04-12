@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/Table.css";
+import "../styles/table.css";
 import { itemSales } from "../actions/itemActionTypes";
 
 type TableProps = {
