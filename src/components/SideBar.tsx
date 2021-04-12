@@ -9,14 +9,14 @@ type SideBarProps = {
 };
 
 const SideBar: React.FC<SideBarProps> = (props: SideBarProps) => {
-    
+
   const { title, image, subtitle, tags } = props;
 
   return (
     <div>
       <div className="item-container">
         <div className="item-description">
-          <img className="item-avatar" src={image} alt="Item Image" />
+          <img className="item-avatar" src={image} alt="Item display" />
           <h3 className="title">{title}</h3>
           <p className="subtitle">{subtitle}</p>
         </div>

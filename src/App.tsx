@@ -14,7 +14,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     dispatch(GetItem());
-  }, []);
+  }, [dispatch]);
  
   return (
     <>
