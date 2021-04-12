@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import SideBar from "./components/SideBar";
+import Table from "./components/Table";
+import Graph from "./components/Graph";
+import { RootStore } from "./store/store";
+import { GetItem } from "./actions/itemActions";
+import "./styles/App.css"
 
-function App() {
+const App: React.FC = () => {
+
+  const dispatch = useDispatch();
+  const { loading, item } = useSelector((state: RootStore) => state.item);
+
+  useEffect(() => {
+    dispatch(GetItem());
+  }, []);
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className="top-banner"> <img src="./utils/images/stackline_logo.svg" alt="Stackline Logo" /> Stackline </div>
+    <div className="main-container">
+      {loading ? (
+        <div> loading... </div>
+      ) : (
+        <>
+          <div className="side-bar-container">
+            <SideBar
+              title={item[0].title}
+              image={item[0].image}
+              subtitle={item[0].subtitle}
+              tags={item[0].tags}
+            />
+          </div>
+          <div className="detail-container">
+            <Graph sales={item[0].sales}/>
+            <Table sales={item[0].sales} />
+          </div>{" "}
+        </>
+      )}
     </div>
+    </>
   );
-}
+};
 
 export default App;
