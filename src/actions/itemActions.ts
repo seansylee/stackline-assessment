@@ -5,7 +5,6 @@ import  fetchItemData  from "../utils/api";
 
 export const GetItem = () => async ( dispatch: Dispatch<ItemDispatchTypes> ) => {
     try {
-        console.log("I've gotten in here!")
         // "Start" the item fetch process -- to show loading state;
         dispatch({
             type: FETCH_ITEM_START 
@@ -23,7 +22,6 @@ export const GetItem = () => async ( dispatch: Dispatch<ItemDispatchTypes> ) => 
         
         // Though in the current design it will never fail,
         // I found it to be good practice.
-        console.log('ive failed')
         dispatch({
             type: FETCH_ITEM_FAIL
         })
