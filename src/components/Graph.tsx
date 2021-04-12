@@ -15,7 +15,7 @@ const Graph: React.FC<GraphProps> = (props: GraphProps) => {
   let wholesaleSalesData: any[] = [];
 
   // creating data points.
-  sales.map((sale) => {
+  sales.forEach((sale) => {
     let day = sale["weekEnding"].split("-");
     let rearrangedDay = `${day[1]}-${day[2]}-${day[0]}`;
     wholesaleSalesData.push({
